@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import HeroSection from "@/components/HeroSection";
+import TrainersPage from "@/components/TrainersPage";
+import AboutPage from "@/components/AboutPage";
+import SchedulePage from "@/components/SchedulePage";
+
+type PageType = "home" | "trainers" | "about" | "schedule";
 
 const Index = () => {
+  const [currentPage, setCurrentPage] = useState<PageType>("home");
+
+  const handleNavigate = (page: "trainers" | "about" | "schedule") => {
+    setCurrentPage(page);
+  };
+
+  const handleBack = () => {
+    setCurrentPage("home");
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen">
+      {currentPage === "home" && <HeroSection onNavigate={handleNavigate} />}
+      {currentPage === "trainers" && <TrainersPage onBack={handleBack} />}
+      {currentPage === "about" && <AboutPage onBack={handleBack} />}
+      {currentPage === "schedule" && <SchedulePage onBack={handleBack} />}
     </div>
   );
 };
