@@ -56,7 +56,7 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
             ← Назад
           </Button>
           <h1 className="text-5xl font-bold font-montserrat text-slate-800">
-            О FIT ZONE
+            О fitEnergy
           </h1>
         </div>
 
@@ -67,7 +67,7 @@ const AboutPage = ({ onBack }: AboutPageProps) => {
                 Ваш путь к совершенству
               </h2>
               <p className="text-lg text-gray-600 font-open-sans leading-relaxed mb-6">
-                FIT ZONE — это не просто фитнес-клуб, это место, где рождаются
+                fitEnergy — это не просто фитнес-клуб, это место, где рождаются
                 чемпионы. Уже более 10 лет мы помогаем людям изменить свою жизнь
                 через спорт и здоровый образ жизни.
               </p>

@@ -71,7 +71,7 @@ const MobileHeroSection = ({ onNavigate }: MobileHeroSectionProps) => {
         <div className="flex-1">
           <div className="text-center py-12">
             <div className="text-gray-400 text-lg mb-4">🏋️‍♂️</div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">FIT ZONE</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">fitEnergy</h2>
             <p className="text-gray-600">Выберите раздел для продолжения</p>
           </div>
         </div>
