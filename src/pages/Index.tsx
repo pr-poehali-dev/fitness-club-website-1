@@ -1,6 +1,6 @@
 import { useState } from "react";
-import HeroSection from "@/components/HeroSection";
-import TrainersPage from "@/components/TrainersPage";
+import MobileHeroSection from "@/components/MobileHeroSection";
+import MobileTrainersPage from "@/components/MobileTrainersPage";
 import AboutPage from "@/components/AboutPage";
 import SchedulePage from "@/components/SchedulePage";
 
@@ -19,8 +19,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {currentPage === "home" && <HeroSection onNavigate={handleNavigate} />}
-      {currentPage === "trainers" && <TrainersPage onBack={handleBack} />}
+      {currentPage === "home" && (
+        <MobileHeroSection onNavigate={handleNavigate} />
+      )}
+      {currentPage === "trainers" && <MobileTrainersPage onBack={handleBack} />}
       {currentPage === "about" && <AboutPage onBack={handleBack} />}
       {currentPage === "schedule" && <SchedulePage onBack={handleBack} />}
     </div>
